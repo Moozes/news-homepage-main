@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  background-color: hsl(36deg, 100%, 99%);
+  color: hsl(236deg, 13%, 42%);
+  position: relative;
+}
+
+.container {
+  width: 80%;
+  margin: 50px auto;
+}
+@media (max-width: 32.25rem) {
+  .container {
+    width: 90%;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 32.25rem) {
+  header nav {
+    display: none;
+  }
+}
+header nav a {
+  color: hsl(236deg, 13%, 42%);
+  text-decoration: none;
+}
+header nav a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+header .responsive-menu-button {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 32.25rem) {
+  header .responsive-menu-button {
+    display: block;
+  }
+}
+
+.mobile-side-navigation-overlay {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(233deg, 8%, 79%, 0.5);
+  transition: all 0.5s;
+}
+.mobile-side-navigation-overlay.show {
+  right: 0;
+}
+@media (min-width: 32.25rem) {
+  .mobile-side-navigation-overlay {
+    display: none;
+  }
+}
+.mobile-side-navigation-overlay .mobile-side-navigation-container {
+  background-color: #fff;
+  width: 16.40625rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  height: 100vh;
+}
+.mobile-side-navigation-overlay .mobile-side-navigation-container .actions {
+  text-align: right;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+.mobile-side-navigation-overlay .mobile-side-navigation-container nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mobile-side-navigation-overlay .mobile-side-navigation-container nav a {
+  color: hsl(236deg, 13%, 42%);
+  text-decoration: none;
+}
+.mobile-side-navigation-overlay .mobile-side-navigation-container nav a:hover {
+  color: hsl(5deg, 85%, 63%);
+}
+
+section.featured-news {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+section.featured-news article {
+  width: 28.8rem;
+  flex: 1 1 auto;
+  margin-bottom: 30px;
+}
+section.featured-news article img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+section.featured-news article .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+section.featured-news article .content h1.title {
+  flex: 1 1 auto;
+  width: 12.28765625rem;
+  font-size: 3.75rem;
+  color: hsl(240deg, 100%, 5%);
+  line-height: 70px;
+  font-weight: 800;
+}
+@media (max-width: 1260px) {
+  section.featured-news article .content h1.title {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 1120px) {
+  section.featured-news article .content h1.title {
+    font-size: 2.5rem;
+    line-height: 50px;
+  }
+}
+@media (max-width: 503px) {
+  section.featured-news article .content h1.title {
+    font-size: 1.875rem;
+    line-height: 30px;
+  }
+}
+section.featured-news article .content .introduction {
+  flex: 1 1 auto;
+  width: 12.28765625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+section.featured-news article .content .introduction p {
+  font-size: 1.0625rem;
+  line-height: 30px;
+}
+section.featured-news article .content .introduction .read-more-button {
+  align-self: flex-start;
+  background-color: hsl(5deg, 85%, 63%);
+  padding: 20px 30px;
+  color: hsl(36deg, 100%, 99%);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+section.featured-news article .content .introduction .read-more-button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+section.featured-news aside {
+  width: 21.6rem;
+  background-color: hsl(240deg, 100%, 5%);
+  padding: 20px;
+}
+@media (max-width: 64.5rem) {
+  section.featured-news aside {
+    flex: 1 1 auto;
+    padding: 30px 20px;
+  }
+}
+section.featured-news aside h2 {
+  font-size: 2.5rem;
+  color: hsl(35deg, 77%, 62%);
+  margin-bottom: 40px;
+}
+section.featured-news aside h3 {
+  color: hsl(36deg, 100%, 99%);
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+section.featured-news aside h3:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+section.featured-news aside p {
+  color: hsl(233deg, 8%, 79%);
+  line-height: 25px;
+}
+section.featured-news aside .hr {
+  margin: 40px 0;
+  border-top: 1px solid hsl(233deg, 8%, 79%);
+}
+
+section.more-news {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+section.more-news .card {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  flex: 1 1 auto;
+}
+section.more-news .card img {
+  width: 100px;
+  height: 125px;
+}
+section.more-news .card .content > * {
+  margin-bottom: 10px;
+}
+section.more-news .card .content h3 {
+  font-size: 1.5625rem;
+  color: hsl(233deg, 8%, 79%);
+}
+section.more-news .card .content h4 {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 1rem;
+  font-weight: 800;
+}
+section.more-news .card .content p {
+  line-height: 27px;
+}
+
+/*# sourceMappingURL=style.css.map */
